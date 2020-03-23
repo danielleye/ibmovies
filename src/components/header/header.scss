@@ -1,3 +1,4 @@
+$break-small: 414px;
 .ibmovies {
     &__header {
         width: 100%;
@@ -24,6 +25,17 @@
                 min-width: 7rem;
                 max-width: 7rem;
                 text-transform: capitalize;
+                @media screen and (max-width: $break-small) {
+                    width: 4rem;
+                    min-width: 4rem;
+                    max-width: 4rem;
+                    padding: 0 1rem 0 1rem;
+                }
+            }
+            .bx--select__arrow {
+                @media screen and (max-width: $break-small) {
+                    right: 0.5rem;
+                }
             }
         }
     }
