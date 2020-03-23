@@ -1,12 +1,15 @@
 import React from 'react'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Header from './components/header/Header.js'
 
 export default function App() {
     return (
-        <h1>
-            Hello IBMovies{' '}
-            <span role="img" aria-label="movie emoji">
-                🎬
-            </span>
-        </h1>
+        <React.Fragment>
+            <Header />
+            <Container fluid>
+                <Row></Row>
+            </Container>
+        </React.Fragment>
     )
 }
