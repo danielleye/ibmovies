@@ -6,6 +6,7 @@ import Row from 'react-bootstrap/Row'
 import Header from './components/header/Header.js'
 import Inspiration from './components/inspiration/Inspiration.js'
 import Gallery from './components/gallery/Gallery.js'
+import EpisodeList from './components/episode-list/EpisodeList.js'
 
 import enData from './data/en_US.json'
 import laData from './data/la_PG.json'
@@ -28,6 +29,9 @@ export default function App() {
                         <h1>{currentData.heading}</h1>
                         <Inspiration info={currentData} />
                         <Gallery galleryList={currentData['gallery']} />
+                        <EpisodeList
+                            episodeList={currentData['episode-list']}
+                        />
                     </main>
                 </Row>
             </Container>
