@@ -22,10 +22,16 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
-h1 {
-    font-weight: 700;
-    text-align: center;
-    margin: 1rem auto;
-    text-transform: capitalize;
+.ibmovies {
+    &__main-container {
+        h1 {
+            font-weight: 700;
+            text-align: center;
+            margin: 1rem auto;
+            text-transform: capitalize;
+        }
+        h2 {
+            font-weight: 700;
+        }
+    }
 }

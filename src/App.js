@@ -3,6 +3,7 @@ import { initialState, reducer } from './Store.js'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Header from './components/header/Header.js'
+import Inspiration from './components/inspiration/Inspiration.js'
 
 import enData from './data/en_US.json'
 import laData from './data/la_PG.json'
@@ -18,7 +19,13 @@ export default function App() {
             <Header />
             <Container fluid>
                 <Row>
-                    <h1>{currentData.heading}</h1>
+                    <main
+                        className="ibmovies__main-container container"
+                        id="main-content"
+                    >
+                        <h1>{currentData.heading}</h1>
+                        <Inspiration info={currentData} />
+                    </main>
                 </Row>
             </Container>
         </LangContext.Provider>
