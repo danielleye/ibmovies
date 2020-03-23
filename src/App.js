@@ -8,6 +8,7 @@ import Header from './components/header/Header.js'
 import Inspiration from './components/inspiration/Inspiration.js'
 import Gallery from './components/gallery/Gallery.js'
 import EpisodeList from './components/episode-list/EpisodeList.js'
+import ScrollToTop from './components/scroll-to-top/ScrollToTop.js'
 
 import enData from './data/en_US.json'
 import laData from './data/la_PG.json'
@@ -60,6 +61,7 @@ export default function App() {
                         <EpisodeList
                             episodeList={currentData['episode-list']}
                         />
+                        <ScrollToTop />
                     </main>
                 </Row>
             </Container>
