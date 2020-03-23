@@ -1,4 +1,5 @@
 $break-mid: 768px;
+$break-small: 414px;
 .ibmovies {
     &__inspiration {
         margin: 2rem auto;
@@ -58,6 +59,13 @@ $break-mid: 768px;
                     margin-top: 1rem;
                     iframe {
                         min-height: 380px;
+                    }
+                }
+            }
+            @media screen and (max-width: $break-small) {
+                &__video-container {
+                    iframe {
+                        min-height: 200px;
                     }
                 }
             }

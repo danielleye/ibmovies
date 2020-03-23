@@ -91,6 +91,7 @@ $break-small: 414px;
                     -webkit-line-clamp: 2;
                     overflow: hidden;
                     margin-top: 1rem;
+                    font-size: 0.9rem;
                     @media screen and (max-width: $break-mid) {
                         display: flex;
                     }

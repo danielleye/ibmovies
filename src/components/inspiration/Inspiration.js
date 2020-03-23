@@ -33,8 +33,7 @@ export default function Inspiration(props) {
                     </div>
                 </div>
                 <div className="ibmovies__inspiration__bottom__video-container">
-                    {/* comment out for developing. */}
-                    {/* <iframe title="video" src={props.info['video-embed']} /> */}
+                    <iframe title="video" src={props.info['video-embed']} />
                 </div>
             </div>
         </section>
