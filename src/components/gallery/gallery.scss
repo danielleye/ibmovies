@@ -1,0 +1,41 @@
+$break-mid: 768px;
+$break-small: 414px;
+.ibmovies {
+    &__gallery {
+        margin: 8rem auto;
+        &__carousel {
+            width: 90%;
+            margin: 1rem auto;
+            @media screen and (max-width: $break-mid) {
+                width: 100%;
+            }
+            .carousel-inner {
+                width: 100%;
+                height: 500px;
+                display: flex;
+                background-color: #000000;
+                @media screen and (max-width: $break-mid) {
+                    height: 380px;
+                }
+                @media screen and (max-width: $break-small) {
+                    height: 250px;
+                }
+                .carousel-caption {
+                    background-color: rgba(255, 255, 255, 0.5);
+                    color: #000000;
+                    padding: 0.4rem;
+                    p {
+                        margin-bottom: 0.5rem;
+                        @media screen and (max-width: $break-small) {
+                            font-size: 0.8rem;
+                            padding: 0;
+                        }
+                    }
+                }
+                img {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

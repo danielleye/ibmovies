@@ -1,9 +1,11 @@
 import React, { useReducer } from 'react'
+import './app.scss'
 import { initialState, reducer } from './Store.js'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Header from './components/header/Header.js'
 import Inspiration from './components/inspiration/Inspiration.js'
+import Gallery from './components/gallery/Gallery.js'
 
 import enData from './data/en_US.json'
 import laData from './data/la_PG.json'
@@ -25,6 +27,7 @@ export default function App() {
                     >
                         <h1>{currentData.heading}</h1>
                         <Inspiration info={currentData} />
+                        <Gallery galleryList={currentData['gallery']} />
                     </main>
                 </Row>
             </Container>

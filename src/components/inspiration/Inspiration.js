@@ -16,7 +16,7 @@ export default function Inspiration(props) {
                     <div id="snippets">
                         {props.info.snippets.map((snippets, i) => {
                             return (
-                                <span>
+                                <span key={i}>
                                     {snippets}
                                     <br />
                                 </span>
@@ -33,7 +33,8 @@ export default function Inspiration(props) {
                     </div>
                 </div>
                 <div className="ibmovies__inspiration__bottom__video-container">
-                    <iframe title="video" src={props.info['video-embed']} />
+                    {/* comment out for developing. */}
+                    {/* <iframe title="video" src={props.info['video-embed']} /> */}
                 </div>
             </div>
         </section>
