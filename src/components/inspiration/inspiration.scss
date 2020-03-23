@@ -48,6 +48,8 @@ $break-mid: 768px;
             }
             @media screen and (max-width: $break-mid) {
                 flex-direction: column;
+                width: 90%;
+                margin: 0 auto;
                 &__text-container {
                     width: 100%;
                 }
