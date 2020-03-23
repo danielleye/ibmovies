@@ -1,0 +1,23 @@
+$break-small: 768px;
+.bx--form-item {
+    align-items: flex-end;
+    .bx--toggle-input__label {
+        color: #ffffff;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 3rem;
+        margin-bottom: 0;
+        @media screen and (max-width: $break-small) {
+            flex-direction: column;
+            margin-right: 1.5rem;
+        }
+        .bx--toggle__switch {
+            margin-top: 0;
+            margin-left: 0.5rem;
+            @media screen and (max-width: $break-small) {
+                margin-top: 0.5rem;
+                margin-left: 0;
+            }
+        }
+    }
+}

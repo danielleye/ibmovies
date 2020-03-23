@@ -23,11 +23,19 @@ body {
         h1 {
             font-weight: 700;
             text-align: center;
-            margin: 1rem auto;
+            margin: 2rem auto;
             text-transform: capitalize;
         }
         h2 {
             font-weight: 700;
         }
+    }
+}
+.dark-theme {
+    background: #161616;
+    color: #c1c1c1;
+    h1,
+    h2 {
+        opacity: 0.8;
     }
 }

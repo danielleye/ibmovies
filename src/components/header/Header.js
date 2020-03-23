@@ -1,4 +1,5 @@
 import React from 'react'
+import ThemeToggle from './ThemeToggle.js'
 import LanguageSelector from './LanguageSelector.js'
 
 import './header.scss'
@@ -12,6 +13,7 @@ export default function Header() {
                     🎬
                 </span>
             </div>
+            <ThemeToggle />
             <div className="ibmovies__header__lang-selector">
                 <LanguageSelector />
             </div>
