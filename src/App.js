@@ -3,6 +3,7 @@ import './app.scss'
 import { initialState, reducer } from './Store.js'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
+import Nav from './components/nav/Nav.js'
 import Header from './components/header/Header.js'
 import Inspiration from './components/inspiration/Inspiration.js'
 import Gallery from './components/gallery/Gallery.js'
@@ -52,6 +53,7 @@ export default function App() {
                         className="ibmovies__main-container container"
                         id="main-content"
                     >
+                        <Nav />
                         <h1>{currentData.heading}</h1>
                         <Inspiration info={currentData} />
                         <Gallery galleryList={currentData['gallery']} />

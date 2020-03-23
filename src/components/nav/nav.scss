@@ -1,0 +1,36 @@
+.ibmovies {
+    &__nav {
+        &__nav-list {
+            width: 20rem;
+            height: 2rem;
+            margin: 0 auto;
+            padding: 0;
+            display: flex;
+            list-style: none;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            li {
+                &:after {
+                    content: '';
+                    width: 0;
+                    position: relative;
+                    border: 1px solid #949494;
+                    top: 0;
+                    left: 1rem;
+                }
+                &:last-child {
+                    &:after {
+                        border: none;
+                    }
+                }
+                a {
+                    text-decoration: none;
+                    color: #0f62fe;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

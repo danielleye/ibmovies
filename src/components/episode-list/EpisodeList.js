@@ -56,7 +56,7 @@ export default function EpisodeList({ episodeList }) {
 
     return (
         <section className="ibmovies__episode-list">
-            <h2>Episode List</h2>
+            <h2 id="episode-list">Episode List</h2>
             <Dropdown
                 className="ibmovies__episode-list__sort-dropdown"
                 ariaLabel="Dropdown"

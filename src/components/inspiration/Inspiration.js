@@ -6,7 +6,7 @@ import './inspiration.scss'
 export default function Inspiration(props) {
     return (
         <section className="ibmovies__inspiration">
-            <h2>Inspiration</h2>
+            <h2 id="inspiration">Inspiration</h2>
             <div className="ibmovies__inspiration__top">
                 <img src={logo} alt="Stranger Things Logo"></img>
                 <p>{props.info.description}</p>
