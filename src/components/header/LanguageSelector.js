@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
 import { Select, SelectItem } from 'carbon-components-react'
 import { SET_LANGUAGE } from 'Store.js'
-import { LangContext } from 'App.js'
+import { AppContext } from 'App.js'
 
 export default function LanguageSelector() {
-    const { langDispatch } = useContext(LangContext)
+    const { dispatch } = useContext(AppContext)
     const langItems = [
         { label: 'en', value: 'en_US' },
         { label: 'la', value: 'la_PG' },
@@ -15,7 +15,7 @@ export default function LanguageSelector() {
             labelText=""
             id="language-selector"
             onChange={e =>
-                langDispatch({ type: SET_LANGUAGE, value: e.target.value })
+                dispatch({ type: SET_LANGUAGE, value: e.target.value })
             }
         >
             {langItems.map((lang, i) => {

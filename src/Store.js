@@ -10,10 +10,10 @@ export function reducer(state, action) {
     switch (action.type) {
         case SET_LANGUAGE:
             localStorage.setItem('setLanguage', action.value)
-            return { setLanguage: action.value }
+            return { ...state, setLanguage: action.value }
         case SET_THEME:
             localStorage.setItem('setTheme', action.value)
-            return { setTheme: action.value }
+            return { ...state, setTheme: action.value }
         default:
             return initialState
     }

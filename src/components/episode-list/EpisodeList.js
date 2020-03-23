@@ -8,22 +8,10 @@ import './episode-list.scss'
 export default function EpisodeList({ episodeList }) {
     const [sortType, setSortType] = useState('')
     const dropDownItems = [
-        {
-            id: 'rating-asc',
-            text: 'Rating: Low To High',
-        },
-        {
-            id: 'rating-desc',
-            text: 'Rating: High To Low',
-        },
-        {
-            id: 'episode-desc',
-            text: 'Episode: Old To New',
-        },
-        {
-            id: 'episode-asc',
-            text: 'Episode: New To Old',
-        },
+        { id: 'rating-asc', text: 'Rating: Low To High' },
+        { id: 'rating-desc', text: 'Rating: High To Low' },
+        { id: 'episode-desc', text: 'Episode: Old To New' },
+        { id: 'episode-asc', text: 'Episode: New To Old' },
     ]
 
     let sortedEpisodes
@@ -48,7 +36,6 @@ export default function EpisodeList({ episodeList }) {
                 ['desc', 'desc']
             )
             break
-
         default:
             sortedEpisodes = episodeList
             break

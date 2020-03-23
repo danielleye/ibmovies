@@ -3,14 +3,7 @@ import './scroll-to-top.scss'
 
 export default function ScrollToTop() {
     const [isVisible, setIsVisible] = useState(false)
-
-    useEffect(() => {
-        document.addEventListener('scroll', toggleVisibility)
-        return () => {
-            document.removeEventListener('scroll', toggleVisibility)
-        }
-    }, [isVisible])
-
+    
     const toggleVisibility = () => {
         const navbar = document.querySelector('.ibmovies__nav')
         const navBottomPosition = navbar.offsetTop + navbar.offsetHeight
@@ -20,6 +13,13 @@ export default function ScrollToTop() {
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' })
     }
+
+    useEffect(() => {
+        document.addEventListener('scroll', toggleVisibility)
+        return () => {
+            document.removeEventListener('scroll', toggleVisibility)
+        }
+    }, [isVisible])
 
     return (
         <div className="ibmovies__scroll-to-top">

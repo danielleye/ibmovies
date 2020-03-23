@@ -38,8 +38,9 @@ export default function EpisodeListCard({ episode }) {
                 <span className="card-info__name">{episode.name}</span>
                 <div className="card-info__meta">
                     <span>Season {episode.season}</span>
-                    <span>Rating: {episode.rating}</span>
-                    <span>Runtime: {epData.Runtime}</span>
+                    <span>Episode {episode.episode}</span>
+                    <span>Rating {episode.rating}</span>
+                    <span>Runtime {epData.Runtime}</span>
                 </div>
                 <span className="card-info__plot">{epData.Plot}</span>
             </div>

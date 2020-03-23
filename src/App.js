@@ -15,12 +15,11 @@ import enData from './data/en_US.json'
 import laData from './data/la_PG.json'
 const languages = { en_US: enData, la_PG: laData }
 
-export const LangContext = React.createContext(null)
-export const ThemeContext = React.createContext(null)
+export const AppContext = React.createContext(null)
 
 export default function App() {
-    const [lang, langDispatch] = useReducer(reducer, initialState)
-    const [theme, themeDispatch] = useReducer(reducer, initialState)
+    const [state, dispatch] = useReducer(reducer, initialState)
+    const { setLanguage: lang, setTheme: theme } = state
 
     function getData(lang) {
         const data = languages[lang]
@@ -47,36 +46,32 @@ export default function App() {
         })
         return data
     }
-    const currentData = getData(lang.setLanguage)
+    const currentData = getData(lang)
 
     return (
-        <ThemeContext.Provider value={{ theme, themeDispatch }}>
-            <LangContext.Provider value={{ lang, langDispatch }}>
-                <Header />
-                <Container
-                    fluid
-                    className={
-                        theme.setTheme === 'dark' ? 'dark-theme' : undefined
-                    }
-                >
-                    <Row>
-                        <main
-                            className="ibmovies__main-container container"
-                            id="main-content"
-                        >
-                            <Nav />
-                            <h1>{currentData.heading}</h1>
-                            <Inspiration info={currentData} />
-                            <Gallery galleryList={currentData['gallery']} />
-                            <EpisodeList
-                                episodeList={currentData['episode-list']}
-                            />
-                            <ScrollToTop />
-                            <Footer />
-                        </main>
-                    </Row>
-                </Container>
-            </LangContext.Provider>
-        </ThemeContext.Provider>
+        <AppContext.Provider value={{ lang, theme, dispatch }}>
+            <Header />
+            <Container
+                fluid
+                className={theme === 'dark' ? 'dark-theme' : undefined}
+            >
+                <Row>
+                    <main
+                        className="ibmovies__main-container container"
+                        id="main-content"
+                    >
+                        <Nav />
+                        <h1>{currentData.heading}</h1>
+                        <Inspiration info={currentData} />
+                        <Gallery galleryList={currentData['gallery']} />
+                        <EpisodeList
+                            episodeList={currentData['episode-list']}
+                        />
+                        <ScrollToTop />
+                        <Footer />
+                    </main>
+                </Row>
+            </Container>
+        </AppContext.Provider>
     )
 }
