@@ -1,4 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap');
+@import 'carbon-components/scss/globals/scss/styles.scss';
+html {
+    font-size: 17px;
+}
+@media (max-width: 900px) {
+    html {
+        font-size: 15px;
+    }
+}
+@media (max-width: 400px) {
+    html {
+        font-size: 13px;
+    }
+}
+
 body {
     margin: 0;
     font-family: 'IBM Plex Sans', sans-serif, -apple-system, BlinkMacSystemFont,
@@ -8,7 +23,9 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
+h1 {
+    font-weight: 700;
+    text-align: center;
+    margin: 1rem auto;
+    text-transform: capitalize;
 }
