@@ -11,7 +11,7 @@ export default function LanguageSelector() {
     ]
     return (
         <Select
-            defaultValue={'en_US'}
+            defaultValue={localStorage.getItem('setLanguage') || 'en_US'}
             labelText=""
             id="language-selector"
             onChange={e =>
