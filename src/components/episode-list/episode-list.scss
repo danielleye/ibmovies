@@ -8,6 +8,22 @@
         font-weight: 400;
         display: flex;
         flex-flow: column wrap;
+        &__sort-dropdown {
+            width: 10rem;
+            position: absolute;
+            right: 0;
+            top: 0;
+            .bx--list-box__label {
+                font-size: 0.65rem;
+            }
+            .bx--list-box__field {
+                padding-right: 2rem;
+            }
+            .bx--list-box__menu-item {
+                font-size: 0.65rem;
+                text-align: center;
+            }
+        }
         &__card {
             display: flex;
             flex-direction: row;
