@@ -16,7 +16,33 @@ export const LangContext = React.createContext(null)
 
 export default function App() {
     const [lang, langDispatch] = useReducer(reducer, initialState)
-    const currentData = languages[lang.setLanguage]
+    function getData(lang) {
+        const data = languages[lang]
+        const numberMap = {
+            one: 1,
+            two: 2,
+            three: 3,
+            four: 4,
+            five: 5,
+            six: 6,
+            seven: 7,
+            eight: 8,
+            nine: 9,
+            ten: 10,
+        }
+        data['episode-list'].forEach(ep => {
+            ep.episode =
+                numberMap[
+                    ep.name
+                        .split(' ')[1]
+                        .replace(':', '')
+                        .toLowerCase()
+                ]
+        })
+        return data
+    }
+    const currentData = getData(lang.setLanguage)
+
     return (
         <LangContext.Provider value={{ lang, langDispatch }}>
             <Header />

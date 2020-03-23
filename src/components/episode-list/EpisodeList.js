@@ -35,10 +35,18 @@ export default function EpisodeList({ episodeList }) {
             sortedEpisodes = orderBy(episodeList, ['rating'], ['asc'])
             break
         case 'episode-desc':
-            sortedEpisodes = orderBy(episodeList, ['season'], ['asc'])
+            sortedEpisodes = orderBy(
+                episodeList,
+                ['season', 'episode'],
+                ['asc', 'asc']
+            )
             break
         case 'episode-asc':
-            sortedEpisodes = orderBy(episodeList, ['season'], ['desc'])
+            sortedEpisodes = orderBy(
+                episodeList,
+                ['season', 'episode'],
+                ['desc', 'desc']
+            )
             break
 
         default:
